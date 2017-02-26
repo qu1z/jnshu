@@ -1,0 +1,77 @@
+body{
+    margin:0;  padding:0;
+    background-color:rgb(108,205,213);}
+img {
+    max-width: 100%;
+}
+.back{
+    width: 8.75vw;
+    height: 8.75vw;
+    margin-top: 2.66vw;
+    margin-left: 5.31vw;
+}
+.logo{
+    width:29.38vw;
+    height:12.19vw;
+    padding: 3%  5%;
+    margin:0 auto;
+    text-align:center;
+}
+.word{
+    width:70.94vw;
+    font-family: "sans-serif";
+    font-size: 4.69vw;
+    line-height:8.47vw;
+    color:white;
+    margin:0 auto;
+}
+.down{
+    margin-top:27.5vw;
+    width:100%;
+    height:25vw;
+}
+.box1{
+    float:left;
+    width: 19.69vw;
+    margin-left:19.06vw;
+}
+.login {
+    height:13.75vw;
+    width:13.75vw;
+    margin:0 auto;
+    text-align: center;
+}
+.box2{
+    float:right;
+    width: 19.69vw;
+    margin-right:17.5vw;
+}
+.grape{
+    background-color:rgb(23, 158, 150);
+    border-radius:50%;
+    display:block;
+    margin:0 auto;
+    width:13.75vw;
+    height:13.75vw;
+    text-align:center;
+}
+.bjptt {
+    font-family: "sans-serif";
+    font-size: 2.4vw;
+    line-height: 5.422vw;
+    width:100%;
+    height:5.422vw;
+    color: white;
+    margin: 0 auto;
+    text-align:center;
+}
+p{
+    font-family: "sans-serif";
+    font-size: 2.4vw;
+    line-height: 5.422vw;
+    height:5.422vw;
+    width:100%;
+    color:white;
+    margin:0 auto;
+    text-align: center;
+}

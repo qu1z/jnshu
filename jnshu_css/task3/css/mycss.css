@@ -1,0 +1,72 @@
+html{
+    font-size:62.5%;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:rgb(108,205,213);
+}
+img{
+    max-width:100%;
+}
+.back{
+    margin:0.9rem 0 0 1.8rem;
+}
+.backpic{
+    width:2.7rem;
+    height:2.7rem;
+}
+.logo{
+    width: 9.3rem;
+    height:3.9rem;
+    margin:1.7rem auto 0 auto;
+    text-align:center;
+}
+.intro{
+    margin:5.8rem 4.5rem 0 4.5rem;
+    height:9.8rem;
+    font-size:1.5rem;
+    color:white;
+    text-align:left;
+}
+.out{
+    margin-top:8.5rem;
+    height:7.1rem;
+}
+.box1{
+    float:left;
+    margin-left:4.55rem;
+}
+
+.box2{
+    float:right;
+    margin-right:4.5rem;
+}
+.loginbox{
+    margin:0 auto;
+    text-align: center;
+}
+.grapebox{
+    margin:0 auto;
+    text-align: center;
+}
+.login{
+    width:4.3rem;
+    height:4.3rem;
+}
+.grape{
+    width:4.3rem;
+    height:4.3rem;
+    background-color:rgb(23, 158, 150);
+    border-radius:50%;
+}
+.num{
+    font-size:1.2rem;
+    color:white;
+    text-align:center;
+}
+.ptt{
+    font-size:1.2rem;
+    color:white;
+    text-align:center;
+}
