@@ -1,0 +1,245 @@
+html{
+    font-size:62.5%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size:62.5%;
+}
+.header{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    z-index:1;
+    background-color: rgb(90, 192, 206);
+    text-align:center;
+}
+.back{
+    float:left;
+    margin:1.2rem auto 1.2rem 1.7rem;
+    border:none;
+    outline:none;
+    background-color: rgb(90, 192, 206);
+    text-align:center;
+}
+.backicon{
+    width:1.1rem;
+    height:1.9rem;
+}
+.personalpage {
+    height: 4.3rem;
+    line-height: 4.3rem;
+    font-size: 1.6rem;
+    color: white;
+}
+.backgroundbox{
+    margin-top:4.3rem;
+    width:100%;
+    height:16.45rem;
+    background: url(../img/backgroundremix.png) no-repeat;
+    background-size: cover;
+}
+.photobox{
+    float:left;
+    margin:4rem auto 4rem 1.5rem;
+    width:8.55rem;
+    height:8.55rem;
+    background-color: rgb(254, 254, 254);
+    border-radius: 50%;
+    font-size:1.4rem;
+    text-align: center;
+    overflow:hidden;
+}
+.photopic{
+    width:75%;
+    height:75%;
+    margin-top:2.1rem;
+}
+.message{
+    position:absolute;
+    top:10.1rem;
+    left:12rem;
+}
+.name{
+    position:absolute;
+    top:10.1rem;
+    left:12rem;
+    font-size:1.8rem;
+    color:white;
+}
+.age{
+    position:absolute;
+    top:10.4rem;
+    left:18.1rem;
+    font-size:1.4rem;
+    color:white;
+}
+.gps{
+    position:absolute;
+    margin:8.6rem auto auto 12rem;
+    font-size:1.2rem;
+    color:white;
+}
+.gpsicon{
+    width:1.2rem;
+    height:1.2rem;
+}
+.columnprofessionalskill{
+    height:2.5rem;
+    padding:0.75rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.professionalskill{
+    float:left;
+    margin:0.75rem auto auto 0.75rem;
+    padding-left:0.75rem;
+    /*padding-top:3px;*/
+    border-left:3px solid rgb(87, 184, 198);
+    font-size:0.8rem;
+}
+.columnlivehome{
+    height:2.5rem;
+    padding:0.75rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.staricon{
+    width:0.8rem;
+    height:0.8rem;
+}
+.livehome{
+    float:left;
+    margin:0.7rem auto 0.9rem 1.5rem;
+    font-size:0.8rem;
+}
+.nolunch{
+    float:left;
+    margin:0.7rem auto 0.9rem 1.05rem;
+    font-size:0.8rem;
+}
+.columnworkyear{
+    height: 2.5rem;
+    padding: 0.7rem 0.75rem 0.75rem 0.75rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.workyear{
+    float:left;
+    margin:0.7rem auto 0.9rem 1.5rem;
+    font-size:0.8rem;
+    color:rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding-right:2.25rem;
+}
+.yearnum {
+    float: left;
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+}
+.columnworktime{
+    height: 2.5rem;
+    padding: 0.75rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.worktime{
+    float:left;
+    margin:0.7rem auto 0.9rem 1.5rem;
+    font-size:0.8rem;
+    color:rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding-right:2.25rem;
+}
+.allday{
+    float: left;
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+}
+.columnserviceprice{
+    height: 2.5rem;
+    padding: 0.75rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.serviceprice{
+    float:left;
+    margin:0.7rem auto 0.9rem 1.5rem;
+    font-size:0.8rem;
+    color:rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding-right:2.25rem;
+}
+.pricenum{
+    float: left;
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+}
+.columnselfintro{
+    /*height: 2.5rem;*/
+    /*padding: 0.75rem;*/
+    /*border-bottom: 1px solid rgb(225, 229, 231);*/
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items:center;
+    height: 2.5rem;
+    padding: 0.75rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.selfintro{
+    /*float:left;*/
+    /*margin:0.7rem auto 0.9rem 1.5rem;*/
+    /*font-size:0.8rem;*/
+    /*color:rgb(153, 153, 153);*/
+    /*border-right: 1px solid rgb(225, 229, 231);*/
+    /*padding-right:0.75rem;*/
+    flex:0 0 6.1rem;
+    font-size:0.8rem;
+    color:rgb(153, 153, 153);
+    padding-left: 1.5rem;
+    padding-right: -0.75rem;
+    border-right: 1px solid rgb(225, 229, 231);
+}
+.introword{
+    /*position:absolute;*/
+    /*margin: 0.7rem auto 0.9rem 1.5rem;*/
+    /*overflow:hidden;*/
+    order: 1;
+    flex:0 0 auto;
+    justify-content: center;
+    display:table-cell;
+    width:50%;
+    padding-left: 1.5rem;
+    font-size: 0.8rem;
+
+}
+.clickgroup {
+    text-align:center;
+}
+.leaveword{
+    position:fixed;
+    bottom:2rem;
+    left:1.8rem;
+    text-align:center;
+    width:43vw;
+    height:4.4rem;
+    font-size:1.7rem;
+    line-height:4.4rem;
+    border:0.1rem solid rgb(90, 192, 206);
+    color:rgb(90, 192, 206);
+    background-color: white;
+    border-radius:3%;
+}
+.telephone{
+    position:fixed;
+    bottom:2rem;
+    right:1.8rem;
+    text-align:center;
+    width:43vw;
+    height:4.4rem;
+    font-size:1.7rem;
+    line-height:4.4rem;
+    border:0.1rem solid;
+    color:white;
+    background-color:rgb(90, 192, 206);
+    border-radius:3%;
+}
+
