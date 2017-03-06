@@ -1,0 +1,15 @@
+.nolunch{
+    height: 2.2rem;
+    line-height: 2.2rem;
+    margin-left: 1.05rem;
+    font-size: 0.8rem;
+}
+.workyear{
+    margin-left: 0.8rem;
+    font-size:0.8rem;
+    color:rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding: auto 0.7rem  auto 0.7rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+}

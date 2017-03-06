@@ -1,0 +1,234 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(90, 192, 206);
+    text-align: center;
+}
+.back{
+    width: 1.3rem;
+    height: 1.8rem;                     /*原因可能是只是按钮部分浮动了，他的子元素图片并没有浮动，所以*/
+    float: left;                        /*旁边的文字部分只能减去图片所占的区域后才执行margin语句*/
+    margin: 1.2rem auto 1.2rem 1.8rem;  /*解决办法1：手动调整margin值给title居中（蠢）*/
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: rgb(90, 192, 206);
+    text-align: center;
+}
+.personalpage{
+    width: 100vw;     /*不用通配符*/
+    height: 4.2rem;  /*是不等于0的，因为p标签默认margin=16px*/
+    margin: 0 auto;/*按理说这一条设置的是水平居中，但是在f12下取消这一条竟然上下位移了，难道之前margin不是0么*/
+    line-height: 4.2rem;/*按钮部分浮动了，为什么title会不居中？*/
+    background-color: rgb(90, 192, 206);
+    font-size: 1.8rem;
+    color:white;
+}
+.backgroundbox{
+    width: 100vw;
+    height: 16.4rem;
+    margin-top: 4.2rem;
+    background: url(../img/backgroundremix.png) no-repeat;
+    background-size: 100%;
+}
+.photobox{
+    width: 8.55rem;
+    height: 8.55rem;
+    float: left;
+    margin: 4rem auto 4rem 1.5rem;
+    background-color: rgb(254, 254, 254);
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+.messagebox {
+    float: left;
+    margin: 5.1rem auto auto 1.8rem;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    /*!*-webkit-box-pack: justify;*!*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+}
+.name{
+    /*float: left;*/
+    /*margin: 5.1rem 0 auto 1.8rem;*/
+    font-size: 1.8rem;
+    color: white;
+    /*!*display: inline-block;*!*/
+    /*clear: right;*/
+}
+.gps{
+    /*float: left;*/
+    /*margin-left: 2.1rem;*/
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+.gpsicon{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.professionalskill{
+    margin: 0.85rem auto 0.85rem 0.75rem;
+    padding-left: 0.7rem;
+    border-left: 2px solid rgb(87, 184, 198);
+    /*border-bottom: 1px solid rgb(225, 229, 231);*/
+    font-size: 0.8rem;
+}
+.columnstar{
+    height: 2.6rem;
+    line-height: 2.6rem;
+    /*margin: 0.9rem auto 0.9rem auto;*/
+    border-top: 1px solid rgb(225, 229, 231);
+}
+.staricon {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.livehome{
+    margin-left: 1.5rem;
+    font-size: 0.8rem;
+}
+.nolunch{
+    margin-left: 1.05rem;
+    font-size: 0.8rem;
+}
+.columnworkyear{
+    height: 2.6rem;
+    line-height: 2.6rem;
+    /*padding: 0.7rem 0.75rem 0.75rem 0.75rem;*/
+    border-top: 1px solid rgb(225, 229, 231);
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.workyear{
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+    color: rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding-right: 2.25rem;
+}
+.yearnum {
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+}
+.columnworktime{
+    height: 2.6rem;
+    line-height: 2.6rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.worktime{
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+    color: rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding-right: 2.25rem;
+}
+.allday {
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+}
+.columnserviceprice{
+    height: 2.6rem;
+    line-height: 2.6rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.serviceprice{
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+    color: rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+    padding-right: 2.25rem;
+}
+.pricenum {
+    margin: 0.7rem auto 0.9rem 1.5rem;
+    font-size: 0.8rem;
+}
+.columnselfintro{
+    /*height: 2.5rem;*/
+    /*padding: 0.75rem;*/
+    /*border-bottom: 1px solid rgb(225, 229, 231);*/
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    /*height: 2.6r;*/
+    margin-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.selfintro{
+    /*float:left;*/
+    /*margin:0.7rem auto 0.9rem 1.5rem;*/
+    /*font-size:0.8rem;*/
+    /*color:rgb(153, 153, 153);*/
+    /*border-right: 1px solid rgb(225, 229, 231);*/
+    /*padding-right:0.75rem;*/
+    flex: 0 0 6.1rem;
+    font-size: 0.8rem;
+    color: rgb(153, 153, 153);
+    padding-left: 1.5rem;
+    /*padding-right: -0.75rem;*/
+    border-right: 1px solid rgb(225, 229, 231);
+}
+.introword {
+    /*position:absolute;*/
+    /*margin: 0.7rem auto 0.9rem 1.5rem;*/
+    /*overflow:hidden;*/
+    order: 1;
+    flex: 0 0 auto;
+    justify-content: center;
+    display: table-cell;
+    width: 50%;
+    padding-left: 1.5rem;
+    font-size: 0.8rem;
+}
+.clickgroup {
+    text-align:center;
+}
+.leaveword{
+    position:fixed;
+    bottom: 2vw;
+    left:2vw;
+    text-align:center;
+    width:43vw;
+    height:4.4rem;
+    font-size:1.7rem;
+    line-height:4.4rem;
+    border:0.1rem solid rgb(90, 192, 206);
+    color:rgb(90, 192, 206);
+    background-color: white;
+    border-radius: .5rem;
+}
+.telephone{
+    position:fixed;
+    bottom:2vw;
+    right: 2vw;
+    text-align:center;
+    width:43vw;
+    height:4.4rem;
+    font-size:1.7rem;
+    line-height:4.4rem;
+    border:0.1rem solid;
+    color:white;
+    background-color:rgb(90, 192, 206);
+    border-radius: .5rem;
+}
+
+
+
+
+
+
+

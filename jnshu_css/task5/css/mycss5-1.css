@@ -1,0 +1,151 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.title,.back,.personalpage,.telephone{
+    background-color: rgb(90, 192, 206);
+}
+.title,.back,.photobox,.clickgroup,.leaveword,.telephone{
+    text-align: center;
+}
+.professionalskill,.livehome,.nolunch,.workyear,.yearnum,.worktime,.allday,.serviceprice,.pricenum ,.selfintro,.introword{
+    font-size: 0.8rem;
+}
+.gps{
+    font-size: 1.2rem;
+}
+.personalpage,.name,.leaveword,.telephone{
+    font-size: 1.8rem;
+}
+.back,.photobox,.messagebox{
+    float: left;
+}
+.personalpage,.name,.gps,.telephone{
+    color: white;
+
+}
+.workyear,.worktime,.serviceprice,.selfintro{
+    color: rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+}
+.columnstar,.columnworkyear{
+    border-top: 1px solid rgb(225, 229, 231);
+}
+.columnworkyear,.columnworktime,.columnserviceprice,.columnselfintro{
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.workyear,.yearnum ,.worktime,.allday,.serviceprice,.pricenum{
+    margin: 0.7rem auto 0.9rem 1.5rem;
+}
+.workyear,.worktime,.serviceprice{
+    padding-right: 2.25rem;
+}
+.columnstar,.columnworkyear,.columnworktime,.columnserviceprice{
+    height: 2.6rem;
+    line-height: 2.6rem;
+}
+.leaveword,.telephone{
+    position:fixed;
+    bottom: 2vw;
+    left:2vw;
+    width:43vw;
+    height:4.4rem;
+    line-height:4.4rem;
+    border-radius: .5rem;
+    border:0.1rem solid rgb(90, 192, 206);
+}
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.back{
+    width: 1.3rem;
+    height: 1.8rem;
+    margin: 1.2rem auto 1.2rem 1.8rem;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.personalpage{
+    width: 100vw;
+    height: 4.2rem;
+    margin: 0 auto;
+    line-height: 4.2rem;
+}
+.backgroundbox{
+    width: 100vw;
+    height: 16.4rem;
+    margin-top: 4.2rem;
+    background: url(../img/backgroundremix.png) no-repeat;
+    background-size: 100%;
+}
+.photobox{
+    width: 8.55rem;
+    height: 8.55rem;
+    margin: 4rem auto 4rem 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.messagebox {
+    margin: 5.1rem auto auto 1.8rem;
+}
+
+.gps{
+    margin-top: 1rem;
+}
+.gpsicon{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.professionalskill{
+    margin: 0.85rem auto 0.85rem 0.75rem;
+    padding-left: 0.7rem;
+    border-left: 2px solid rgb(87, 184, 198);
+}
+.staricon {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.livehome{
+    margin-left: 1.5rem;
+}
+.nolunch {
+    margin-left: 1.05rem;
+}
+.columnselfintro{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.selfintro {
+    flex: 0 0 6.1rem;
+    padding-left: 1.5rem;
+}
+.introword {
+    order: 1;
+    flex: 0 0 auto;
+    justify-content: center;
+    display: table-cell;
+    width: 50%;
+    padding-left: 1.5rem;
+}
+.leaveword,.photobox{
+    color:rgb(90, 192, 206);
+    background-color: white;
+}
+
+
+
+
+
+

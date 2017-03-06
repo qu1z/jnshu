@@ -1,0 +1,52 @@
+.title,.back,.personalpage,.telephone{
+    background-color: rgb(90, 192, 206);
+}
+.title,.back,.photobox,.clickgroup,.leaveword,.telephone{
+    text-align: center;
+}
+.professionalskill,.livehome,.nolunch,.workyear,.yearnum,.worktime,.allday,.serviceprice,.pricenum ,.selfintro,.introword{
+    font-size: 0.8rem;
+}
+.gps{
+    font-size: 1.2rem;
+}
+.personalpage,.name,.leaveword,.telephone{
+    font-size: 1.8rem;
+}
+.back,.photobox,.messagebox{
+    float: left;
+}
+.personalpage,.photobox,.name,.gps,.telephone{
+    color: white;
+
+}
+.workyear,.worktime.serviceprice,.selfintro{
+    color: rgb(153, 153, 153);
+    border-right: 1px solid rgb(225, 229, 231);
+}
+.columnstar,.columnworkyear{
+    border-top: 1px solid rgb(225, 229, 231);
+}
+.columnworkyear,.columnworktime,.columnserviceprice,.columnselfintro{
+    border-bottom: 1px solid rgb(225, 229, 231);
+}
+.workyear,.yearnum ,.worktime,.allday,.serviceprice,.pricenum{
+    margin: 0.7rem auto 0.9rem 1.5rem;
+}
+.workyear,.worktime,.serviceprice{
+    padding-right: 2.25rem;
+}
+.columnstar,.columnworkyear,.columnworktime,.columnserviceprice{
+    height: 2.6rem;
+    line-height: 2.6rem;
+}
+.leaveword,.telephone{
+    position:fixed;
+    bottom: 2vw;
+    left:2vw;
+    width:43vw;
+    height:4.4rem;
+    line-height:4.4rem;
+    border-radius: .5rem;
+    border:0.1rem solid rgb(90, 192, 206);
+}

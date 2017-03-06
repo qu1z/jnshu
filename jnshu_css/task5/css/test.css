@@ -1,0 +1,26 @@
+.wrap {
+    background-color: #D66464;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.left {
+    float: left;
+    width: 100px;
+    background: #00f;
+    height: 180px;
+}
+.right {
+    float: right;
+    width: 150px;
+    background: #0f0;
+    height: 200px;
+}
+.center {
+    background: #FFFFFF;
+    margin-left: 110px;
+    margin-right: 160px;
+    height: 150px;
+}
