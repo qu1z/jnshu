@@ -1,0 +1,108 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {
+    margin:0;
+    padding:0
+}
+html {
+    font-size: 62.5%;
+}
+img {
+    max-width: 100%;
+}
+.navbar {
+    padding: 1%;
+    min-height: 0;
+    background-color: rgb(52, 190, 222);
+}
+.menu {
+    width: 34px;
+    height: 27px;
+    line-height: 27px;
+    background: url(../img/menu.png) center no-repeat;
+    padding: 1%;
+    display: block;
+}
+@media only screen and (max-width: 768px) {
+    .lastgame {
+        margin-top: 13% !important;
+    }
+}
+.lastgame {
+    margin: 7rem 3% 3%;
+    border: 1px solid rgb(184, 184, 185);
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lastgame span{
+    font-size: 2.5rem;
+    line-height: 7.5rem;
+}
+.backicon {
+    margin-right: 1%;
+    width: 24px;
+    height: 40px;
+    background: url(../img/back.png) no-repeat;
+    display: inline-block;
+}
+.ghostgame {
+    margin: 3% 3% 0;
+    border: 1px solid rgb(184, 184, 185);
+    border-bottom: 1px solid orange;
+    text-align: center;
+    color: orange;
+    font-size: 3rem;
+    line-height: 9rem;
+}
+.gameitems {
+    position: relative;
+    margin: 0 3% 3%;
+    padding: 3% 0;
+    border: 1px solid rgb(184, 184, 185);
+    border-top: none;
+}
+.group1 {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(52, 190, 222);
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    line-height: 6rem;
+    color: white;
+	text-decoration: none;
+}
+.group1:hover {
+    font-size: 4rem;
+}
+.group2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 4.5rem;
+}
+.points {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+.point {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: rgb(184, 184, 185);
+    border-radius: 50%;
+}
+.point:hover {
+    background-color: rgb(52, 190, 222);
+}
+.triangle {
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid orange;
+}

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+img {
+    max-width: 100%;
+}
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    background-color: rgb(52, 190, 222);
+}
+.house {
+    width: 51px;
+    height: 42px;
+    padding: 1%;
+}
+header p {
+    line-height: 6rem;
+    font-size: 2rem;
+    color: white;
+    display: inline-block;
+}
+.exc {
+    width: 42px;
+    height: 40px;
+    padding: 1%;
+}
+main {
+    padding-top: 6rem;
+    background-color: rgb(52, 190, 222);
+}
+.up {
+    padding-bottom: 1.5%;
+    border-bottom: 1px solid grey;
+}
+.background {
+    width: 279px;
+    height: 163px;
+    margin: 1.5% auto 0;
+    padding: 1.5% 0 0;
+    background: url(../img/win.png) no-repeat;
+    background-size: contain;
+}
+.achieve {
+    margin: 0 auto;
+    width: 80vw;
+    padding: 1.5% 0;
+    font-size: 2.4rem;
+    color: rgb(204, 182, 87);
+}
+.up p {
+    margin: 0 auto;
+    width: 80vw;
+    font-size: 1.5rem;
+    color: white;
+}
+.down {
+    background-color: white;
+}
+.message {
+    position: relative;
+    padding: 0 0 0.5% 10vw;
+    border-bottom: 1px solid grey;
+}
+h3 {
+    padding: 0.5% 0;
+}
+.message p {
+    font-size: 1.5rem;
+    color: grey;
+}
+.message span {
+    position: absolute;
+    top: 1%;
+    right: 25%;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1% 0;
+    width: 100%;
+    background-color: rgba(52, 190, 222, 0.6);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.again, .share {
+    width: 20vw;
+    line-height: 4.8rem;
+    font-size: 2.4rem;
+    color: white;
+    border-radius: .5rem;
+    text-align: center;
+    text-decoration: none;
+}
+.again {
+    background-color: rgba(243, 112, 114, 0.6);
+}
+.share {
+    background-color: rgba(248, 180, 69, 0.6);
+}
+@media only screen and (max-width: 768px) {
+    .background {
+        width: 50vw;
+        height: 30vw;
+    }
+    .again, .share {
+        line-height: 2.4rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+
