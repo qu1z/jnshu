@@ -71,10 +71,15 @@ header .container .row {
     text-align: center;
 }
 .navbar-nav li a {
+	border-bottom: 5px solid transparent;
     color: white!important;
 }
 
 @media only screen and (min-width:768px) {
+	.navbar-nav li a {
+    border-bottom: 5px solid transparent;
+    color: white!important;
+}
     .navbar-nav li a:hover {
         border-bottom: 5px solid #fff;
     }
