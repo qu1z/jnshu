@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+/*顶栏*/
+.topbar {
+    background-color: #1d7ad9;
+}
+.s-telephone {
+    line-height: 2.8rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.f-of {
+    overflow: hidden;
+}
+.f-fr {
+    float: right;
+}
+.s-topbar-btn {
+    outline: none;
+    border: none;
+    border-left: 1px solid #fff;
+    border-radius: 0;
+    background-color: #1d7ad9;
+    color: #fff;
+}
+/*导航条*/
+.f-pd {
+    padding-top: 10px;
+    padding-bottom :10px;
+}
+.s-nav-bgc {
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    line-height: 5px!important;
+    color: #000!important;
+    box-shadow: 2px 2px 10px #888;
+}
+@media only screen and (max-width: 768px) {
+    .s-nav-bgc {
+        margin: 0 auto;
+        border-radius: 0;
+        background-color:  #1d7ad9;
+        color: #fff!important;
+        box-shadow: none;
+        text-align: center;
+    }
+    .navbar-collapse .f-fr {
+        float: none;
+    }
+    .f-bgc {
+        background-color: #1d7ad9;
+
+    }
+}
+.s-nav-bgc:hover {
+    background-color: #1d7ad9!important;
+    color: #fff!important;
+}
+/*流程图*/
+.process {
+    display: flex;
+    float: right;
+}
+.f-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sides {
+    width: 5rem;
+    height: .5rem;
+    background-color: #ff7f02;
+}
+.middle {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #ff7f02;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 50%;
+}
+.step1,
+.step2,
+.step3,
+.step4 {
+    margin-top: 10px;
+    text-align: center;
+    color: #ff7f02;
+}
+@media only screen and (max-width:768px) {
+    .process {
+        float: none;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width:600px) {
+    .sides {
+    width: 3.5rem;
+    }
+    .s-telephone {
+        display: none;
+    }
+}
+@media only screen and (max-width:400px) {
+    .sides {
+        width: 2.5rem;
+    }
+}
+.f-margin-t {
+    margin-top: 5rem;
+}
+/*列表头*/
+.formtitle {
+    margin-top: 5rem;
+    padding-left: .5rem;
+    border-left: 2px solid #1d7ad9;
+    font-size: 1.8rem;
+}
+/*修改默认样式*/
+input[type="radio"]{
+    -webkit-appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #888;
+    border-radius: 50%;
+    outline: none;
+}
+.f-dm input:hover {
+    border: none;
+    background: url(../img/circle.jpg) no-repeat;
+    background-position: -1px 0;
+}
+.f-dm input:checked {
+    border: none;
+    outline: none;
+    background: url(../img/circle.jpg) no-repeat;
+    background-position: -1px 0;
+}
+.f-dm input:focus {
+    outline: none;
+    border: none;
+}
+select {
+    -webkit-appearance: none;
+}
+input[type="text"] {
+    width: 5rem;
+}
+/*列表*/
+/*选择箱型*/
+.f-padding-l {
+    padding-left: 1rem;
+}
+.f-padding-l2 {
+    padding-left: 2rem;
+}
+.f-padding-column2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.f-padding-t {
+    padding-top: 2rem;
+}
+.f-padding-b {
+    padding-bottom: 2rem;
+}
+.product {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    outline: none;
+}
+.f-padding-column {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.s-font {
+    line-height: 1.8rem;
+}
+.s-bg {
+    padding-left: 1.6rem;
+    width: 10rem;
+    background: url(../img/dropdown.png) no-repeat right;
+}
+.f-dropdown-right {
+    float: right;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+}
+/*边框*/
+.s-border1 {
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    border-left: 1px solid #888;
+}
+.s-border2 {
+    border-bottom: 1px solid #888;
+}
+.redbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    width: 20rem;
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: #e15053;
+}
+.s-btn-font {
+    color: #fff;
+    font-size: 2.4rem
+}
+footer {
+    margin-top: 5rem;
+}
+.f-margin-b2 {
+    margin-bottom: 5rem;
+}
+.f-margin-column {
+    margin-top: .5rem;
+}
+.s-font-grey {
+    color: #888;
+}
+@media only screen and (max-width: 992px) {
+    .footerlink {
+        margin-top: .5rem;
+    }
+    .f-foot-padding1 {
+        padding-left: 2.4rem;
+    }
+    .f-foot-padding2 {
+        padding-left: 3.2rem;
+    }
+}
+.brand {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background-color: #1d7ad9;
+    text-align: center;
+    line-height: 2rem;
+    color: #fff;
+}
