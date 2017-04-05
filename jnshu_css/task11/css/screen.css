@@ -48,7 +48,9 @@ main .blank .icon {
   margin: 1rem;
   margin-right: 0;
   padding-right: 1rem;
-  border-right: 1px solid #888;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #888;
 }
 main .blank .textblank {
   margin-left: 1rem;
