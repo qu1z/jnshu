@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  background-color: #34bede;
+}
+header .house {
+  width: 51px;
+  height: 42px;
+  padding: 1%;
+}
+header p {
+  display: inline-block;
+  line-height: 6rem;
+  font-size: 2rem;
+  color: #fff;
+}
+header .exc {
+  width: 42px;
+  height: 40px;
+  padding: 1%;
+}
+
+main {
+  padding-top: 6rem;
+  background-color: #34bede;
+}
+main .up {
+  padding-bottom: 1.5%;
+  border-bottom: 1px solid #b8b8b9;
+}
+main .up .background {
+  width: 279px;
+  height: 163px;
+  margin: 1.5% auto 0;
+  padding: 1.5% 0 0;
+  background: url(../img/win.png) no-repeat;
+  background-size: contain;
+}
+main .up .achieve {
+  margin: 0 auto;
+  padding: 1.5% 0;
+  width: 80vw;
+  font-size: 2.4rem;
+  color: #ccb657;
+}
+main .up p {
+  margin: 0 auto;
+  width: 80vw;
+  font-size: 1.5rem;
+  color: #fff;
+}
+main .down {
+  background-color: #fff;
+}
+main .down .message {
+  position: relative;
+  padding: 0;
+  padding-bottom: .5%;
+  padding-left: 10vw;
+  border-bottom: 1px solid #b8b8b9;
+}
+main .down .message h3 {
+  padding: 0.5% 0;
+}
+main .down .message p {
+  font-size: 1.5rem;
+  color: #b8b8b9;
+}
+main .down .message span {
+  position: absolute;
+  top: 1%;
+  right: 25%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 1% 0;
+  width: 100%;
+  background-color: rgba(52, 190, 222, 0.6);
+}
+footer .again {
+  width: 20vw;
+  color: #fff;
+  border-radius: .5rem;
+  line-height: 4.8rem;
+  font-size: 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(243, 112, 114, 0.6);
+}
+@media only screen and (max-width: 480px) {
+  footer .again {
+    line-height: 2.4rem;
+    font-size: 1.2rem;
+  }
+}
+footer .share {
+  width: 20vw;
+  color: #fff;
+  border-radius: .5rem;
+  line-height: 4.8rem;
+  font-size: 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(248, 180, 69, 0.6);
+}
+@media only screen and (max-width: 480px) {
+  footer .share {
+    line-height: 2.4rem;
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=3.css.map */

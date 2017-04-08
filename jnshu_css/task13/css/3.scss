@@ -1,0 +1,140 @@
+$blue: #34bede;
+$grey: #b8b8b9;
+$org: #ffa500;
+$yellow: #ccb657;
+$breakpoints: ('xs': 'only screen and ( max-width: 480px)') !default;
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin icon ($wid,$hei) {
+  width: $wid;
+  height: $hei;
+  padding: 1%;
+}
+@mixin button ($bgc) {
+  width: 20vw;
+  color: #fff;
+  border-radius: .5rem;
+  line-height: 4.8rem;
+  font-size: 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: $bgc;
+}
+@mixin respond-to ($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+
+  @if not $query {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+header {
+  @include flex (space-between);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  background-color: $blue;
+  .house {
+    @include icon (51px,42px);
+  }
+  p {
+    display: inline-block;
+    line-height: 6rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .exc {
+    @include icon (42px,40px);
+  }
+}
+main {
+  padding-top: 6rem;
+  background-color: $blue;
+  .up {
+    padding-bottom: 1.5%;
+    border-bottom: 1px solid $grey;
+    .background {
+      width: 279px;
+      height: 163px;
+      margin: 1.5% auto 0;
+      padding: 1.5% 0 0;
+      background: url(../img/win.png) no-repeat;
+      background-size: contain;
+    }
+    .achieve {
+      margin: 0 auto;
+      padding: 1.5% 0;
+      width: 80vw;
+      font-size: 2.4rem;
+      color: $yellow;
+    }
+    p {
+      margin: 0 auto;
+      width: 80vw;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  }
+  .down {
+    background-color: #fff;
+    .message {
+      position: relative;
+      padding: 0 {
+        bottom: .5%;
+        left: 10vw;
+      }
+      border-bottom: 1px solid $grey;
+      h3 {
+        padding: 0.5% 0;
+      }
+      p {
+        font-size: 1.5rem;
+        color: $grey;
+      }
+      span {
+        position: absolute;
+        top: 1%;
+        right: 25%;
+      }
+    }
+  }
+}
+footer {
+  @include flex (space-around);
+  position: fixed;
+  bottom: 0;
+  padding: 1% 0;
+  width: 100%;
+  background-color: rgba(52, 190, 222, 0.6);
+  .again {
+    @include button (rgba(243, 112, 114, 0.6));
+    @include respond-to (xs) {
+      line-height: 2.4rem;
+      font-size: 1.2rem;
+    }
+  }
+  .share {
+    @include button (rgba(248, 180, 69, 0.6));
+    @include respond-to (xs) {
+      line-height: 2.4rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  }
