@@ -1,0 +1,187 @@
+$blue: #5ac0ce;
+$dblue: #55a7b2;
+$grey: #888;
+$big: 2.2rem;
+$middle: 2rem;
+$small: 1.8rem;
+@mixin btn ($bgc,$clr){
+  width: 8rem;
+  line-height: 3rem;
+  border-radius: .5rem;
+  background-color: $bgc;
+  color: $clr;
+  font-size: $big;
+  border: none;
+  outline: none;
+}
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin points {
+  width: 30vw;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow:hidden;
+}
+@mixin li ($pst,$size) {
+  float: $pst;
+  line-height: 45px;
+  font-size: $size;
+}
+@mixin text ($cor){
+  display: block;
+  margin: 0 auto;
+  color: $cor;
+}
+@mixin pic ($wid,$hei,$link,$bg-c) {
+  width: $wid;
+  height: $hei;
+  background-image: $link;
+  background-color: $bg-c;
+  background-repeat: no-repeat;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+* {
+  margin:0;
+  padding:0
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+header {
+  position: fixed;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: $blue;
+  .btn-group {
+    @include flex (center);
+    margin: 0 auto;
+    .btn1 {
+      @include btn ($dblue,#fff);
+      margin-right: -7px;
+    }
+    .btn2 {
+      @include btn (#fff,$blue);
+    }
+  }
+  .btn-site {
+    position: absolute;
+    top: 6.5px;
+    right: 1rem;
+  }
+
+}
+main {
+  padding-top: 60px;
+  .formhead {
+    overflow: hidden;
+    label {
+      .pull {
+        float: left;
+        width: (100%/3);
+        height: 3rem;
+        text-indent: calc(50% - 36px);
+        option {
+          font-size: $middle;
+        }
+        .hidden {
+          display:none;
+        }
+      }
+    }
+  }
+  .formbody {
+    ul {
+      list-style: none;
+      border-bottom: 1px solid $grey;
+      .f-flex {
+        @include flex (flex-start);
+        padding: 1rem {
+          right: 0;
+          left: 0;
+        }
+        list-style: none;
+        .pic {
+          margin-left: 1rem;
+        }
+        .textbox {
+          margin-left: 1rem;
+          font-size: $middle;
+          color: $grey;
+        }
+      }
+      li {
+        overflow: hidden;
+        .datearea {
+          @include points;
+          @include li (left,$small);
+          margin-left: 4.4rem;
+        }
+        .price {
+          @include li (right,$big);
+          margin-right: 1rem;
+          color: red;
+        }
+        .righticon {
+          float: right;
+          margin: 1rem {
+            top: .6rem;
+            bottom: 0;
+            left: 0;
+          }
+
+        }
+      }
+    }
+  }
+}
+footer {
+  @include flex (space-around);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: #fff;
+  border-top: 1px solid $grey;
+  .footbox {
+    display: block;
+    font-size: $small;
+    text-align: center;
+    .house {
+      @include pic (2.4rem,2rem,url(../img/house.png),#fff);
+      background-size: 2.4rem 2rem;
+    }
+    .firstpage {
+      @include text ($blue);
+    }
+    .mine {
+      @include pic (2.4rem,2rem,url(../img/mine.png),#fff);
+      background-size: 2.4rem 2rem;
+    }
+    .minetext{
+      @include text ($grey);
+      text-decoration: none;
+    }
+  }
+  .penbox {
+    @include flex (center);
+    width: 4rem;
+    height: 4rem;
+    background-color: $blue;
+    border-radius: 50%;
+    .pen {
+      @include pic (2rem,2rem,url(../img/pen.png),$blue);
+      line-height: 2rem;
+      background-size: 2rem 2rem;
+    }
+  }
+}
+

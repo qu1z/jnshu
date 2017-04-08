@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  position: fixed;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #5ac0ce;
+}
+header .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+header .btn-group .btn1 {
+  width: 8rem;
+  line-height: 3rem;
+  border-radius: .5rem;
+  background-color: #55a7b2;
+  color: #fff;
+  font-size: 2.2rem;
+  border: none;
+  outline: none;
+  margin-right: -7px;
+}
+header .btn-group .btn2 {
+  width: 8rem;
+  line-height: 3rem;
+  border-radius: .5rem;
+  background-color: #fff;
+  color: #5ac0ce;
+  font-size: 2.2rem;
+  border: none;
+  outline: none;
+}
+header .btn-site {
+  position: absolute;
+  top: 6.5px;
+  right: 1rem;
+}
+
+main {
+  padding-top: 60px;
+}
+main .formhead {
+  overflow: hidden;
+}
+main .formhead label .pull {
+  float: left;
+  width: 33.33333%;
+  height: 3rem;
+  text-indent: calc(50% - 36px);
+}
+main .formhead label .pull option {
+  font-size: 2rem;
+}
+main .formhead label .pull .hidden {
+  display: none;
+}
+main .formbody ul {
+  list-style: none;
+  border-bottom: 1px solid #888;
+}
+main .formbody ul .f-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
+}
+main .formbody ul .f-flex .pic {
+  margin-left: 1rem;
+}
+main .formbody ul .f-flex .textbox {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: #888;
+}
+main .formbody ul li {
+  overflow: hidden;
+}
+main .formbody ul li .datearea {
+  width: 30vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  float: left;
+  line-height: 45px;
+  font-size: 1.8rem;
+  margin-left: 4.4rem;
+}
+main .formbody ul li .price {
+  float: right;
+  line-height: 45px;
+  font-size: 2.2rem;
+  margin-right: 1rem;
+  color: red;
+}
+main .formbody ul li .righticon {
+  float: right;
+  margin: 1rem;
+  margin-top: .6rem;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: #fff;
+  border-top: 1px solid #888;
+}
+footer .footbox {
+  display: block;
+  font-size: 1.8rem;
+  text-align: center;
+}
+footer .footbox .house {
+  width: 2.4rem;
+  height: 2rem;
+  background-image: url(../img/house.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-size: 2.4rem 2rem;
+}
+footer .footbox .firstpage {
+  display: block;
+  margin: 0 auto;
+  color: #5ac0ce;
+}
+footer .footbox .mine {
+  width: 2.4rem;
+  height: 2rem;
+  background-image: url(../img/mine.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-size: 2.4rem 2rem;
+}
+footer .footbox .minetext {
+  display: block;
+  margin: 0 auto;
+  color: #888;
+  text-decoration: none;
+}
+footer .penbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #5ac0ce;
+  border-radius: 50%;
+}
+footer .penbox .pen {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/pen.png);
+  background-color: #5ac0ce;
+  background-repeat: no-repeat;
+  text-align: center;
+  border: none;
+  outline: none;
+  line-height: 2rem;
+  background-size: 2rem 2rem;
+}
+
+/*# sourceMappingURL=screen2.css.map */
