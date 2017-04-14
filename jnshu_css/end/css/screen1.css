@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+img {
+    max-width: 100%;
+}
+.f-flex {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f-flex1 {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.f-flex2 {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .container .row {
+    padding: 1% 0;
+}
+@media only screen and (max-width:768px) {
+    header .container .row {
+        padding: 0;
+    }
+    .s-white {
+        text-align: center!important;
+    }
+}
+.telephone {
+    float: left;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #29b078;
+}
+.icon {
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 1%;
+    float: right;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid #29b078;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+/*导航条*/
+.s-green {
+    background: #29b078;
+}
+@media only screen and (min-width:768px) {
+    .navbar-nav {
+        float: right;
+    }
+}
+.navbar {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+.logo {
+    /*margin-bottom: 5px;*/
+    height: 30px;
+}
+.navbar-nav ul li {
+    text-align: center;
+}
+.navbar-nav li a {
+    border-bottom: 5px solid transparent;
+    color: white!important;
+}
+
+@media only screen and (min-width:768px) {
+    .navbar-nav li a {
+        border-bottom: 5px solid transparent;
+        color: white!important;
+    }
+    .navbar-nav li a:hover {
+        border-bottom: 5px solid #fff;
+    }
+}
+.collapsed {
+    border: none;
+    outline: none;
+}
+/*小屏幕时登陆*/
+.signin {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .signin {
+        display: block;
+        padding: 1% 0;
+        line-height: 1rem;
+        overflow: hidden;
+    }
+}
+.signin a {
+    float: right;
+    margin-right: 1%;
+    color: black!important;
+}
+.register {
+    padding-right: 1%;
+    border-right: 1px solid #29b078;
+}
+/*介绍图片*/
+.faster {
+    width: 100%;
+}
+/*网页标签*/
+.s-sign-fontcolor {
+    color: black;
+}
+.s-sign-fontcolor:visited {
+    color: #29b078;
+}
+/*大列表*/
+.f-margin {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.f-table-margin {
+    margin-top: 10px;
+}
+.f-table-margin {
+    margin-bottom: 10px;
+}
+.s-table-font {
+    font-size: 1.6rem;
+}
+.s-table-color {
+    color: #f2a845;
+}
+.s-table-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.s-table-border {
+    box-shadow: 5px 5px 5px #888888;
+}
+.s-table-border1 {
+    border-bottom: 1px solid #cccc99;
+}
+.f-flex2 b {
+    padding-bottom: 8px;
+    line-height: 2.4rem;
+}
+.point {
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid  #f2a845;
+    border-radius: 50%;
+}
+.f-flex2:visited .point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f2a845;
+}
+.f-flex2:hover .point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f2a845;
+}
+/*文章*/
+.f-fl {
+    float: left;
+}
+@media only screen and (max-width:768px) {
+    .s-table-border {
+        box-shadow: none;
+        border-top: 1px solid #888;
+        border-bottom: 1px solid #888;
+    }
+    .s-table-border1 {
+        border-bottom: none;
+    }
+    .f-table-margin1 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #888;
+    }
+}
+/*脚*/
+footer {
+    padding-top: 1%;
+    background-color: #29b078;
+}
+.f-left {
+    padding: 10% 5%;
+}
+.jnshu {
+    font-size: 1.8rem;
+    color: #fff;
+}
+.s-font {
+    color: #fff;
+}
+.f-middle {
+    padding: 5%;
+}
+.s-img {
+    width: 10.8rem;
+    height: 10.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .jnshu,
+    .s-font,
+    .s-img {
+        display: block;
+        text-align: left;
+    }
+    .f-left {
+        padding: 5px 15px;
+    }
+    .f-middle {
+        padding: 5px 15px 0;
+    }
+    .f-middle1 {
+        padding: 0 15px 5px;
+    }
+    .s-img {
+        padding-top: 5px;
+    }
+    .jnshu {
+        padding-top: 15px;
+    }
+}
+.f-cm {
+    margin: 0;
+}
+.brand {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background-color: #29b078;
+    text-align: center;
+    line-height: 2rem;
+    color: #fff;
+}
+

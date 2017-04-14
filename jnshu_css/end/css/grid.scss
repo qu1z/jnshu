@@ -1,0 +1,85 @@
+@import 'mediaquary';
+$grid-prefix: col !default;
+$grid-width: 60px !default;
+$grid-gutter: 30px !default;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 100%;
+//  @include respond-to (sm) {
+//    & {
+//      width: 750px;
+//      padding-right: 60px;
+//      padding-left: 60px;
+//    }
+//  }
+//  @include respond-to (md) {
+//    & {
+//      width: 970px;
+//    }
+//}
+//  @include respond-to (lg) {
+//    & {
+//      width: 1170px;
+//    }
+//  }
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  min-height: 1px;
+}
+@mixin grid {
+  float: left;
+  padding-left: $grid-gutter / 2;
+  padding-right: $grid-gutter / 2;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 768px) {
+  @for $i from 1 through 12 {
+    .#{$grid-prefix}-xs-#{$i} {
+      width: 100% * ($i/12);
+      @include grid;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .#{$grid-prefix}-sm-#{$i} {
+      width: 100% * ($i/12);
+      @include grid;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .#{$grid-prefix}-md-#{$i} {
+      width: 100% * ($i/12);
+      @include grid;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .#{$grid-prefix}-lg-#{$i} {
+      width: 100% * ($i/12);
+      @include grid;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  @for $i from 1 through 12 {
+    .#{$grid-prefix}-xs-offset-#{$i} {
+      margin-left: 100% * ($i/12);
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .#{$grid-prefix}-sm-offset-#{$i} {
+      margin-left: 100% * ($i/12);
+    }
+  }
+}

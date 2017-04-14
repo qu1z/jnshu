@@ -1,0 +1,412 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mediaquary.scss';
+@import 'grid.scss';
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin round ($diameter,$radius) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: $radius;
+}
+@mixin pic ($pic) {
+    position: absolute;
+    list-style: none;
+    top: 0;
+    left: 0;
+    -webkit-animation: $pic 24s infinite;
+    -moz-animation: $pic 24s infinite;
+}
+@mixin b1 ($pw,$ph,$pl) {
+  width: $pw;
+  height: $ph;
+  margin: 0 auto;
+  background-image: $pl;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+header {
+  .relation {
+    @include flex (space-between);
+    @include respond-to (xs) {
+      display: none;
+    }
+    padding: 1% 5%;
+    span {
+      font-size: 1rem;
+      color: $green;
+    }
+    .otherlink {
+      width: 50%;
+      overflow: hidden;
+      .icon {
+        @include flex (center);
+        @include round (1.8rem,.9rem);
+        float: right;
+        margin-left: 1rem;
+        border: 1px solid $green;
+      }
+    }
+  }
+  nav {
+    //@include flex (space-between);
+    @include respond-to (xs) {
+      &:hover ul {
+        display: block;
+      }
+      padding: 0;
+    }
+    background-color: $green;
+    padding: 0 5%;
+    .nav-brand {
+      padding: 10px 0;
+      @include respond-to(xs) {
+        margin-left: 5%;
+      }
+    }
+    .nav-tag {
+      float: right;
+      padding-bottom: 1px;
+      line-height: 70px;
+      @include respond-to (xs) {
+        display: none;
+      }
+      .tag-item {
+        padding: 0 .7rem 22.5px;
+        font-size: 1.4rem;
+        color: #fff;
+        &:hover {
+          border-bottom: 5px solid #fff;
+        }
+      }
+    }
+    .collapsed {
+      @include respond-to (xs) {
+        display: block;
+        float: right;
+        margin-top: 20px;
+        margin-right: 5%;
+      }
+      display: none;
+      span {
+        display: block;
+        margin-top: 4px;
+        width: 22px;
+        height: 5px;
+        border-radius: 1px;
+        background-color: #888;
+      }
+    }
+    ul {
+      display: none;
+      border-top: 1px solid #fff;
+      background-color: $green;
+      li {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+}
+main {
+  //轮播图
+  #carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    #slide {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      &:hover li {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+      }
+      #first {
+        @include pic (pic_1);
+        @-webkit-keyframes pic_1 {
+          0% { opacity: 1;}
+          15% { opacity: 1;}
+          25% { opacity: 0;}
+          90% { opacity: 0;}
+          100% { opacity: 1;}
+        }
+      }
+      #second {
+        @include pic (pic_2);
+        @-webkit-keyframes pic_2 {
+          0% { opacity: 0;}
+          15% { opacity: 0;}
+          25% { opacity: 1;}
+          40% { opacity: 1;}
+          50% { opacity: 0;}
+          100% { opacity: 0;}
+        }
+      }
+      #third {
+        @include pic (pic_3);
+        @-webkit-keyframes pic_3 {
+          0% { opacity: 0;}
+          40% { opacity: 0;}
+          50% { opacity: 1;}
+          65% { opacity: 1;}
+          75% { opacity: 0;}
+          100% { opacity: 0;}
+        }
+      }
+    }
+  }
+  //第一栏
+  .container {
+    .row {
+      padding: 5%;
+      overflow: hidden;
+      .col-sm-3 {
+        .rocket {
+          @include b1 (43px, 62px, url(../img/rocket.png))
+        }
+        .archive {
+          @include b1 (60px, 48px, url(../img/archive.png))
+        }
+        .friend {
+          @include b1 (52px, 55px, url(../img/friends.png))
+        }
+        h5 {
+          margin: 10px {
+            right: 0;
+            left: 0;
+          }
+          text-align: center;
+        }
+        h5 + p {
+          @include respond-to (xs) {
+            margin-bottom: 10px;
+            text-align: center;
+          }
+        }
+        span {
+          @include respond-to (xs) {
+            @include flex (center);
+          }
+          i {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background: url(../img/user.png);
+          }
+        }
+        span + p {
+          @include respond-to (xs) {
+            text-align: center;
+          }
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .step1 {
+      padding: 2%;
+      .col-sm-12 {
+        h2 {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+    }
+    .step2 {
+      padding: 2%;
+      @include respond-to (xs) {
+        padding: 0 2%;
+      }
+       .col-sm-3 {
+         @include flex (space-between);
+         .round {
+           @include round (2.8rem,1.4rem);
+           @include flex (center);
+           margin: 5px;
+           min-width: 2.8rem;
+           -webkit-box-shadow:2px 2px 4px $green;
+           box-shadow:2px 2px 4px $green;
+         }
+         span {
+           margin: 3px {
+             top: 0;
+             bottom: 0;
+           }
+         }
+         .arrow {
+           flex-shrink: 0;
+           width: 20px;
+           height: 20px;
+           background: url(../img/arrow.png)
+         }
+       }
+    }
+    .step3 {
+      padding: 2%;
+      @include respond-to (xs) {
+        padding: 0 2%;
+      }
+      .col-sm-3 {
+        .goodmember {
+          margin: 10px;
+          background-color: #fff;
+          .head {
+            margin: 0 auto;
+            width: 111px;
+            height: 109px;
+            background: url(../img/head1.png);
+            border-radius: 2.5rem;
+          }
+          h4 {
+            margin-top: 10px;
+            text-align: center;
+          }
+          p {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .step4 {
+      padding: 0 {
+        bottom: 2%;
+      }
+      .points {
+        @include flex (center);
+        .point {
+          @include round (1rem,.5rem);
+          background-color: $grey;
+          &:hover {
+            background-color: $green;
+          }
+        }
+      }
+    }
+    .step5 {
+      padding: 2%;
+      @include flex (center);
+      @include respond-to (xs) {
+        padding: 0 2%;
+      }
+      .pic {
+        @include flex (center);
+      }
+    }
+    .step6 {
+      padding: 2%;
+      @include respond-to (xs) {
+        display: none;
+      }
+      .col-sm-12 {
+        h2 {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+    }
+    .step7 {
+      padding: 2%;
+      @include respond-to (xs) {
+        display: none;
+      }
+      .f-flex {
+        @include flex (center);
+        @include respond-to(xs) {
+          display: none;
+        }
+        .dot {
+          @include round (5px,50%);
+          background-color: #b8b8b9;
+        }
+        .s-grey {
+          color: #b8b8b9;
+        }
+      }
+    }
+  }
+}
+footer {
+  padding-top: 1%;
+  background-color: $green;
+  .container {
+    .row {
+      overflow: hidden;
+      .col-sm-4 {
+        .col-sm-12 {
+          img {
+            padding: 15px 0;
+            @include respond-to(xs) {
+              display: block;
+              padding: 15px {
+                right: 0;
+              }
+            }
+          }
+          .jnshu {
+            @include respond-to (xs) {
+              display: block;
+              padding-top: 15px;
+              padding-left: 15px;
+              text-align: left;
+            }
+            font-size: 1.8rem;
+            color: #fff;
+          }
+        }
+        .f-left {
+          @include respond-to (xs) {
+            padding: 15px {
+              right: 0;
+              bottom: 0;
+            }
+          }
+          padding: 10% 15px;
+          .s-font {
+            color: #fff;
+          }
+        }
+        .f-middle {
+          @include respond-to (xs) {
+            padding-top: 15px;
+            padding-left: 15px;
+          }
+          padding: 5% 15px 0;
+          .s-font {
+            color: #fff;
+          }
+        }
+        .f-middle1 {
+          @include respond-to (xs) {
+            padding-top: 15px;
+            padding-left: 15px;
+          }
+          padding: 5% 15px 0;
+          .s-font {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .brand {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background-color: $green;
+    text-align: center;
+    line-height: 2rem;
+    color: #fff;
+  }
+}

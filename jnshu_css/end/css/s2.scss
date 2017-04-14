@@ -1,0 +1,282 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mediaquary.scss';
+@import 'grid.scss';
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin round ($diameter,$radius) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: $radius;
+}
+@mixin pic ($pic) {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  left: 0;
+  -webkit-animation: $pic 24s infinite;
+  -moz-animation: $pic 24s infinite;
+}
+@mixin b1 ($pw,$ph,$pl) {
+  width: $pw;
+  height: $ph;
+  margin: 0 auto;
+  background-image: $pl;
+}
+html {
+  font-size: 62.5%;
+  background-color: #eee;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background-color: #eee;
+  header {
+    .relation {
+      @include flex (space-between);
+      @include respond-to (xs) {
+        display: none;
+      }
+      padding: 1% 5%;
+      span {
+        font-size: 1rem;
+        color: $green;
+      }
+      .otherlink {
+        width: 50%;
+        overflow: hidden;
+        .icon {
+          @include flex (center);
+          @include round (1.8rem,.9rem);
+          float: right;
+          margin-left: 1rem;
+          border: 1px solid $green;
+        }
+      }
+    }
+    nav {
+      //@include flex (space-between);
+      @include respond-to (xs) {
+        &:hover ul {
+          display: block;
+        }
+        padding: 0;
+      }
+      background-color: $green;
+      padding: 0 5%;
+      .nav-brand {
+        padding: 10px 0;
+        @include respond-to(xs) {
+          margin-left: 5%;
+        }
+      }
+      .nav-tag {
+        float: right;
+        padding-bottom: 1px;
+        line-height: 70px;
+        @include respond-to (xs) {
+          display: none;
+        }
+        .tag-item {
+          padding: 0 .7rem 22.5px;
+          font-size: 1.4rem;
+          color: #fff;
+          &:hover {
+            border-bottom: 5px solid #fff;
+          }
+        }
+      }
+      .collapsed {
+        @include respond-to (xs) {
+          display: block;
+          float: right;
+          margin-top: 20px;
+          margin-right: 5%;
+        }
+        display: none;
+        span {
+          display: block;
+          margin-top: 4px;
+          width: 22px;
+          height: 5px;
+          border-radius: 1px;
+          background-color: #888;
+        }
+      }
+      ul {
+        display: none;
+        border-top: 1px solid #fff;
+        background-color: $green;
+        li {
+          width: 100%;
+          font-size: 1.4rem;
+          line-height: 2.8rem;
+          text-align: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+  main {
+    .faster {
+      width: 100%;
+    }
+    .f-margin {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      overflow: hidden;
+      .step1 {
+        overflow:hidden;
+        .f-table-margin {
+          margin: 10px {
+            right: 0;
+            left: 0;
+          }
+          .s-sign-fontcolor {
+            color: black;
+            &：visited {
+              color: #29b078;
+            }
+          }
+        }
+      }
+      .step2 {
+        overflow: hidden;
+        .out1 {
+          @include respond-to(xs) {
+            box-shadow: none;
+            border-top: 1px solid #888;
+            border-bottom: 1px solid #888;
+          }
+          padding-left: 0;
+          padding-right: 0;
+          background-color: #fff;
+          //border: 1px solid #888;
+          box-shadow: 1px 1px 3px rgba(34,25,25,0.2);
+          .in1 {
+            @include respond-to(xs) {
+              border-bottom: none;
+            }
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #cccc99;
+            span {
+              @include flex (center);
+              font-size: 1.6rem;
+            }
+          }
+          .in2 {
+            @include flex (center);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            &:hover .point {
+              @include round (12px,50%);
+              background-color: #f2a845;
+            }
+            &:visited .point {
+              @include round (12px,50%);
+              background-color: #f2a845;
+            }
+            .point {
+              @include round (12px,50%);
+              margin-right: 5px;
+              border: 1px solid #f2a845;
+            }
+          }
+        }
+        .out2 {
+          @media only screen and (min-width: 768px) {
+            margin-left: 5%;
+          }
+          background-color: #fff;
+          box-shadow: 1px 1px 3px rgba(34,25,25,0.2);
+          overflow: hidden;
+          img {
+            float: left;
+          }
+          p {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    padding-top: 1%;
+    background-color: $green;
+    .container {
+      .row {
+        overflow: hidden;
+        .col-sm-4 {
+          .col-sm-12 {
+            img {
+              padding: 15px 0;
+              @include respond-to(xs) {
+                display: block;
+                padding: 15px {
+                  right: 0;
+                }
+              }
+            }
+            .jnshu {
+              @include respond-to (xs) {
+                display: block;
+                padding-top: 15px;
+                padding-left: 15px;
+                text-align: left;
+              }
+              font-size: 1.8rem;
+              color: #fff;
+            }
+          }
+          .f-left {
+            @include respond-to (xs) {
+              padding: 15px {
+                right: 0;
+                bottom: 0;
+              }
+            }
+            padding: 10% 15px;
+            .s-font {
+              color: #fff;
+            }
+          }
+          .f-middle {
+            @include respond-to (xs) {
+              padding-top: 15px;
+              padding-left: 15px;
+            }
+            padding: 5% 15px 0;
+            .s-font {
+              color: #fff;
+            }
+          }
+          .f-middle1 {
+            @include respond-to (xs) {
+              padding-top: 15px;
+              padding-left: 15px;
+            }
+            padding: 5% 15px 0;
+            .s-font {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .brand {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      background-color: $green;
+      text-align: center;
+      line-height: 2rem;
+      color: #fff;
+    }
+  }
+}
