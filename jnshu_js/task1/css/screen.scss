@@ -1,0 +1,35 @@
+$org: #ff8c00;
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+#wrap {
+  margin: 0 auto;
+  max-width: 384px;
+  p {
+    @include flex (center);
+    margin: 20px;
+    font-size: 20px;
+  }
+  .box {
+    float: left;
+    margin: 16px;
+    width: 96px;
+    height: 96px;
+    background-color: $org;
+    border-radius: 5px;
+  }
+  .clear {
+    clear: both;
+  }
+  .btn {
+    @include flex (space-around);
+    margin-top: 50px;
+    button {
+      width: 60px;
+      height: 60px;
+      background-color: $org;
+    }
+  }
+}

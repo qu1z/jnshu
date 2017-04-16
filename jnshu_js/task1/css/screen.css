@@ -1,0 +1,35 @@
+#wrap {
+  margin: 0 auto;
+  max-width: 384px;
+}
+#wrap p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-size: 20px;
+}
+#wrap .box {
+  float: left;
+  margin: 16px;
+  width: 96px;
+  height: 96px;
+  background-color: #ff8c00;
+  border-radius: 5px;
+}
+#wrap .clear {
+  clear: both;
+}
+#wrap .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+#wrap .btn button {
+  width: 60px;
+  height: 60px;
+  background-color: #ff8c00;
+}
+
+/*# sourceMappingURL=screen.css.map */
