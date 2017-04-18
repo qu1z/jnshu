@@ -1,0 +1,66 @@
+html {
+  font-size: 62.5%;
+}
+
+.wrap {
+  margin: 0 auto 2vw;
+  max-width: 768px;
+  background-color: #f0f0f0;
+}
+.wrap header {
+  padding: .5vw 1vw;
+  background-color: #9933ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap header p {
+  font-size: 2.4rem;
+  color: #fff;
+}
+.wrap main .top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3vw 0;
+  margin: 3vw;
+  background-color: #fff;
+}
+.wrap main .middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw 0;
+  margin: 3vw;
+  background-color: #fff;
+}
+.wrap main .middle p {
+  font-size: 2.4rem;
+  color: #9933ff;
+}
+.wrap main .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw 0;
+  margin: 3vw;
+  background-color: #fff;
+}
+.wrap footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vw;
+  width: 768px;
+}
+.wrap footer .m-footer-btn {
+  width: 40vw;
+  height: 5vw;
+  background-color: #9933ff;
+}
+.wrap footer .m-footer-btn span {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+/*# sourceMappingURL=screen_2.css.map */

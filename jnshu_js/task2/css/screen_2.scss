@@ -1,0 +1,64 @@
+$purple: #9933ff;
+$bg_grey: #f0f0f0;
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+html {
+  font-size: 62.5%;
+}
+.wrap {
+  margin: 0 auto 2vw;
+  max-width: 768px;
+  background-color: $bg_grey;
+  header {
+    padding: .5vw 1vw;
+    background-color: $purple;
+    @include flex (space-between);
+    p {
+      font-size: 2.4rem;
+      color: #fff;
+    }
+  }
+  main {
+    .top {
+      @include flex (space-around);
+      padding: 3vw 0;
+      margin: 3vw;
+      background-color: #fff;
+    }
+    .middle {
+      @include flex (center);
+      padding: 3vw 0;
+      margin: 3vw;
+      background-color: #fff;
+      p {
+        font-size: 2.4rem;
+        color: $purple;
+      }
+    }
+    .bottom {
+      @include flex (center);
+      padding: 3vw 0;
+      margin: 3vw;
+      background-color: #fff;
+    }
+  }
+  footer {
+    //position: fixed;
+    //bottom: 2vw;
+    @include flex (center);
+    margin: 3vw;
+    width: 768px;
+    .m-footer-btn {
+      width: 40vw;
+      height: 5vw;
+      background-color: $purple;
+      span {
+        font-size: 2.4rem;
+        color: #fff;
+      }
+    }
+  }
+}

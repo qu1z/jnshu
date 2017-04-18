@@ -1,0 +1,125 @@
+$blue: #34bede;
+$grey: #b8b8b9;
+$org: #ffa500;
+$purple: #9933ff;
+$bg_grey: #f0f0f0;
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+.wrap {
+  margin: 0 auto;
+  max-width: 768px;
+  background-color: $bg_grey;
+  header {
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    width: 768px;
+    background-color: $purple;
+    box-sizing: border-box;
+    .menu {
+      display: block;
+      width: 3.4rem;
+      height: 2.7rem;
+      line-height: 2.7rem;
+      background: url(../img/menu.png) center no-repeat;
+    }
+  }
+  main {
+    padding: 4.7rem;
+    .lastgame {
+      @include flex (space-between);
+      margin: 3% {
+        top: 7rem;
+      }
+      border: 1px solid $grey;
+      span {
+        font-size: 2.5rem;
+        line-height: 7.5rem;
+      }
+      .backicon {
+        display: inline-block;
+        margin-right: 1%;
+        width: 2.4rem;
+        height: 4rem;
+        background: url(../img/back.png) no-repeat;
+      }
+    }
+    .ghostgame {
+      margin: 3% {
+        bottom: 0;
+      }
+      border: 1px solid $grey {
+        bottom: 1px solid $org;
+      }
+      text-align: center;
+      color: $org;
+      font-size: 3rem;
+      line-height: 9rem;
+    }
+    .gameitems {
+      position: relative;
+      margin: 3% {
+        top: 0;
+      }
+      padding: 3% {
+        right: 0;
+        left: 0;
+      }
+      border: 1px solid $grey {
+        top: none;
+      }
+      .group1 {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background-color: $purple;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 6rem;
+        color: #fff;
+      }
+      .group1:hover {
+        font-size: 4rem;
+      }
+      .group2 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 4.5rem;
+      }
+      .points {
+        @include flex (center);
+        .point {
+          width: 15px;
+          height: 15px;
+          margin: 5px;
+          background-color: $grey;
+          border-radius: 50%;
+        }
+        .point:hover {
+          background-color: $purple;
+        }
+      }
+      .triangle {
+        position: absolute;
+        top: 40%;
+        right: 3%;
+        width: 0;
+        height: 0;
+        border: 1rem solid transparent {
+          right: none;
+          left: 1rem solid #ffa500;
+        }
+      }
+    }
+  }
+}
