@@ -1,0 +1,73 @@
+$purple: #9933ff;
+$bg_grey: #f0f0f0;
+$gold: #fcc800;
+$hanhong: #e95464;
+$xingfei: #e2041b;
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: {
+    image: url(../images/lp.jpg);
+    repeat: no-repeat;
+    size: cover;
+  }
+  .wrap {
+    margin: 20vh auto 0;
+    padding: 2rem;
+    width: 35rem;
+    //height: 28rem;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    background: $bg-grey;
+    opacity: 0.5;
+    span {
+      display: block;
+      text-align: center;
+      font-size: 2.8rem;
+      color: purple;
+    }
+    input {
+      margin-top: 2rem;
+      padding-left: 2rem;
+      width: 100%;
+      height: 2rem;
+      box-sizing: border-box;
+    }
+    #name {
+      background: {
+        image: url(../images/head.png);
+        repeat: no-repeat;
+        position: .2rem, 0, 0, 0;
+      }
+    }
+    #pwd {
+      background: {
+        image: url(../images/lock.png);
+        repeat: no-repeat;
+        position: .3rem, 0, 0, 0;
+      }
+    }
+    #view {
+      margin-top: .5rem;
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      color: $xingfei;
+    }
+    #signIn {
+      display: block;
+      margin: .5rem auto 0;
+      width: 18rem;
+      height: 3rem;
+      color: #fff;
+      background: $hanhong;
+      border: none;
+    }
+  }
+}

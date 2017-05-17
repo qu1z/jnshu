@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        var xmlhttp;
+        function submit(){
+            //1.创建XHLHttpRequest对象
+            if(window.XMLHttpRequest){
+                //alert("IE7，IE8 ,FireFox。Mozillar、Safari，Opera");
+                //IE7，IE8 ,FireFox。Mozillar、Safari，Opera
+                xmlhttp=new XMLHttpRequest();
+                if(xmlhttp.overrideMimeType){
+                    xmlhttp.overrideMimeType("text/xml");
+                }
+            }else if(window.ActiveXObject){
+                //IE6,IE6.5 IE5
+                alert("IE6,IE6.5 IE5");
+                var activexName= ['MSXML2.XMLHTTP.6.0','MSXML2.XMLHTTP.5.0',                      'MSXML2.XMLHTTP.4.0','msxml2.xmlhttp.3.0','MSXML2.XMLHTTP.2.0',
+                    'MSXML2.XMLHTTP.1.0'];
+                for(var i=0; i<activexName.length;i++){
+                    try{
+                        xmlhttp=new ActiveXObject(activexName[i]);
+                        break;
+                    }catch(e){
+                    }
+                }
+            }
+            if(xmlhttp==undefined||xmlhttp==null){
+                alert("当前浏览器不支持穿件XMLHttpRequest对象，请更换浏览器");
+                return;
+            }
+            //alert(xmlhttp);
+            //2.注册回调方法
+//错误的写法callback();
+//记忆一个固定用法，获取文本框中用户输入的内容
+            var userName=document.getElementById("UserName").value;
+            //POST方式交互
+            //3.设置和服务器端交互的相应参数
+            xmlhttp.open("POST","AjaxServer",true);
+//POST方式交互所需要增加的代码
+            xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+//4.设置向服务器端发送的数据，启动和服务器端的交互
+            xmlhttp.send("name="+userName);
+        }
+        function callback(){
+            //5.判断和服务器端的交互是否完成，还有判断服务器端是否正确返回了数据
+            if(xmlhttp.readyState==4){
+                //表示和服务器端的交互已经完成
+//服务器返回的http状态码
+//200表示“成功”，404表示“未找到”。500表示“服务器内容部错误”
+                //alert(xmlhttp.status);
+                if(xmlhttp.status==200){
+                    //表示服务器端的响应代码是200，正确的返回了数据
+                    //纯文本数据的接受方法
+                    var message=xmlhttp.responseText;
+                    //XML数据对应的DOM对象的接受方法
+                    //使用前提是，服务器端需要设置content-type为text/xml
+                    //var domXml=xmlhttp.responseXML;
+                    alert("bb");
+                    //记忆想div标签填充文本内容的方法
+                    var div=document.getElementById("message");
+                    div.innerHTML=message;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="UserName"/>
+<input type="button" value="校验用户名" onclick="submit()"/>
+<br/>
+<div id="message"></div>
+</body>
+</html>
