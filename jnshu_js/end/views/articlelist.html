@@ -7,36 +7,36 @@
             <div class="g-mn-up">
                 <div class="g-mn-up1">
                     <span><b>发布时间</b></span>
-                    <input type="text" placeholder="开始">
+                    <input type="date" placeholder="开始" ng-model="timeBgn">
                     <span class="line"></span>
-                    <input type="text" placeholder="结束">
+                    <input type="date" placeholder="结束" ng-model="timeOvr">
                     <span><b>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</b></span>
-                    <select name="type" id="type">
-                        <option value="0" style="display:none;">全部</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                    <select name="type" id="type" ng-model="allType" ng-options="item.type as item.name for item in listTypes">
+                        <!--<option value="0">全部</option>-->
+                        <!--<option value="1">首页banner</option>-->
+                        <!--<option value="2">找职位banner</option>-->
+                        <!--<option value="3">找精英banner</option>-->
+                        <!--<option value="4">行业大图</option>-->
                     </select>
                 </div>
                 <div class="g-mn-up2">
                     <span><b>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态</b></span>
-                    <select name="type" id="status">
-                        <option value="0" style="display:none;">全部</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                    <select name="type" id="status" ng-model="allStatus" ng-options="item.status as item.name for item in listStatuses">
+                        <!--<option value="0">全部</option>-->
+                        <!--<option value="1">草稿</option>-->
+                        <!--<option value="2">上线</option>-->
                     </select>
                 </div>
                 <div class="g-mn-up3">
-                    <button id="search" type="button">搜索</button>
-                    <button id="clear" type="button">清除</button>
+                    <button id="search" type="button" ng-click="search()">搜索</button>
+                    <button id="clear" type="button" ng-click="clean()">清除</button>
                     <div class="f-cb"></div>
                 </div>
             </div>
             <div class="g-mn-down">
                 <div class="g-down-title">
                     <span><b>Article列表</b></span>
-                    <a href="#/newadd" id="add">新增</a>
+                    <a ui-sref="newadd" id="add">新增</a>
                 </div>
                 <div class="g-down-body">
                     <div class="table-responsive">
@@ -54,9 +54,42 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+                            <tr ng-repeat="item in data">
+                                <th><b>{{item.id}}</b></th>
+                                <th><b>{{item.title}}</b></th>
+                                <th><b>{{item.type|typeChange}}</b></th>
+                                <th><b>{{item.createAt|date:"yyyy-MM-dd HH:mm:ss"}}</b></th>
+                                <th><b>{{item.updateAt|date:"yyyy-MM-dd HH:mm:ss"}}</b></th>
+                                <th><b>{{item.author}}</b></th>
+                                <th><b>{{item.status|statusChange}}</b></th>
+                                <th>
+                                    <button type="button" ng-click="upOrDown(item.status,item.id)" >{{item.status|statusNot}}</button>
+                                    <button type="button" ng-click="editArt(item.id)">编辑</button>
+                                    <button type="button" ng-click="deleteArt(item.id)">删除</button>
+                                </th>
+                            </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div class="g-down-nav">
+                    <button type="button" ng-click="commit()">确定</button>
+                    <div class="jumpPage">
+                        <span>去第&nbsp;</span>
+                        <input type="text" ng-model="jumpPage">
+                        <span>&nbsp;页</span>
+                        <div class="cb"></div>
+                    </div>
+                    <ul>
+                        <li ng-click="firstPages()">首页</li>
+                        <li ng-repeat="page in pages" ng-click="otherPages(page+1)">{{$index+1}}</li>
+                        <li ng-click="lastPages(pageAm)">末页</li>
+                    </ul>
+                    <div class="perPage">
+                        <span>每页显示&nbsp;</span>
+                        <input type="text">
+                        <span>&nbsp;条</span>
+                        <div class="cb"></div>
                     </div>
                 </div>
             </div>

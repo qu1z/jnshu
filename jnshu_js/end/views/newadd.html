@@ -11,30 +11,49 @@
                 </div>
                 <div class="g-mn-body">
                     <div class="column">
-                        <span><b>标题名称</b></span>
-                        <input type="text">
+                        <form name="art-title" novalidate="novalidate">
+                            <label for="art-title"><b>标题名称</b></label>
+                            <input id="art-title" type="text" ng-model="art.title" ng-minlength="1" ng-maxlength="20" required />
+                        </form>
                     </div>
                     <div class="column">
-                        <span><b>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</b></span>
-                        <select>
-                            <option value="0" style="display:none;">&nbsp;&nbsp;请选择</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                        <form name="art-type" novalidate="novalidate">
+                            <label for="art-type"><b>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</b></label>
+                            <select id="art-type" ng-model="art.type" ng-options="typo.type as typo.stage1 for typo in typo">
+                                <option value="" style="display:none">请选择</option>
+                            </select>
+                            <select ng-if="art.type === 3" ng-model="art.industry" ng-options="nat.industry as nat.stage2 for nat in nat">
+                                <option value="" style="display:none">请选择</option>
+                            </select>
+                        </form>
+                        <!--<span><b>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</b></span>-->
                     </div>
                     <div class="column">
-                        <span><b>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明</b></span>
-                        <input type="text">
+                        <form name="art-explain" novalidate="novalidate">
+                            <label for="art-explain"><b>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明</b></label>
+                            <div id="art-explain" ng-model="art.explain"></div>
+                            <script type="text/javascript">
+                                var E = window.wangEditor;
+                                var editor = new E('#art-explain');
+                                editor.create();
+                            </script>
+                        </form>
                     </div>
                     <div class="column">
-                        <span><b>跳转链接</b></span>
-                        <input type="text">
+                        <form name="art-jump" novalidate="novalidate">
+                            <label for="art-jump"><b>跳转链接</b></label>
+                            <input id="art-jump" type="text" ng-model="art.jump">
+                        </form>
+                        <!--<span><b>跳转链接</b></span>-->
+                        <!--<input type="text">-->
                     </div>
                     <div class="column">
                         <span><b>配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图</b></span>
-                        <button id="choose" type="button">选择文件</button>
+                        <!--<button id="choose" type="button" ng-click="chooseFile">选择文件</button>-->
+                        <label for="file"><span id="choose">选择文件</span></label>
+                        <input id="file" type="file" style="display:none" onchange="angular.element(this).scope().filesChanged(this)" ng-model="art.pic" ng-disabled="choosed">
                     </div>
+                    <img  ng-src={{imgUrl}} id="preview" class="before" alt="配图预览">
                     <div class="column">
                         <div class="table-responsive">
                             <table class="table">
@@ -48,14 +67,24 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
+                                <tr ng-repeat="file in files">
+                                    <td>{{file.name}}</td>
+                                    <td>{{file.size}}</td>
+                                    <td class="progress"><div  class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:{{progress}}%"></div></td>
+                                    <td ng-show="up">
+                                        <button id="upBtn" type="button" ng-click="toUpdate()" value="上传">上传</button>
+                                    </td>
+                                    <td ng-show="delete">
+                                        <button id="deBtn" type="button" ng-click="toDelete()" value="删除">删除</button>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <div class="column">
-                        <button id="online" type="button">立即上线</button>
-                        <button id="save" type="button">存为草稿</button>
+                        <button id="online" type="button" ng-click="upDateNow()">立即上线</button>
+                        <button id="save" type="button" ng-click="saveAsDraft()">存为草稿</button>
                         <button id="cancel" type="button"><b>返回</b></button>
                     </div>
                 </div>

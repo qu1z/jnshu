@@ -9,14 +9,15 @@
     <title>老婆水站</title>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" ng-app = "intoWife" ng-controller = "mine">
     <span>老婆水站</span>
-    <input id="name" type="text" placeholder="&nbsp;&nbsp;请输入用户名" maxlength="13" minlength="5" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
-    <input id="pwd" type="text" placeholder="&nbsp;&nbsp;请输入密码" maxlength="13" minlength="5" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+    <input id="name" type="text" placeholder="&nbsp;&nbsp;请输入用户名" ng-model="name" maxlength="13" minlength="5" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" ng-model="name">
+    <input id="pwd" type="text" placeholder="&nbsp;&nbsp;请输入密码" ng-model="pwd" maxlength="13" minlength="5" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" ng-model="pwd">
     <p id="view"></p>
-    <button id="signIn" type="button">进站</button>
+    <button id="signIn" type="button" ng-click="signIn()">进站</button>
 </div>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="../plugins/jquery-3.2.1.min.js"></script>
+<script src="../plugins/angular-1.6.4/angular.js"></script>
 <script src="../js/login.js"></script>
 </body>
 </html>

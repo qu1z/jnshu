@@ -2,10 +2,10 @@
   position: relative;
 }
 .wrap #g-lt {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 777;
+  float: left;
+  margin-right: -300px;
   width: 300px;
   height: 100vh;
   background: #2e2930;
@@ -71,6 +71,11 @@
 .wrap .g-rt .g-in .g-mn .g-mn-body .column {
   margin-bottom: 10px;
 }
+.wrap .g-rt .g-in .g-mn .g-mn-body .column #myEditor {
+  margin-left: 100px;
+  border-radius: 5px;
+  outline: none;
+}
 .wrap .g-rt .g-in .g-mn .g-mn-body .column input {
   margin-left: 20px;
   width: 800px;
@@ -85,18 +90,37 @@
   border-radius: 5px;
 }
 .wrap .g-rt .g-in .g-mn .g-mn-body .column #choose {
+  display: inline-block;
   margin-left: 20px;
-  width: 80px;
-  height: 30px;
+  padding: 10px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
   border-radius: 5px;
   border: none;
   background: #3278b5;
   font-size: 16px;
   color: #fff;
 }
+.wrap .g-rt .g-in .g-mn .g-mn-body .column .before {
+  display: block;
+  margin-left: 50px !important;
+  max-width: 100%;
+  height: auto;
+}
 .wrap .g-rt .g-in .g-mn .g-mn-body .column .table {
   margin-left: 70px;
   width: 800px;
+}
+.wrap .g-rt .g-in .g-mn .g-mn-body .column .table tbody tr td #upBtn {
+  width: 10px !important;
+  height: 6px !important;
+  font-weight: bold;
+}
+.wrap .g-rt .g-in .g-mn .g-mn-body .column .table tbody tr td #deBtn {
+  width: 10px !important;
+  height: 6px !important;
+  font-weight: bold;
 }
 .wrap .g-rt .g-in .g-mn .g-mn-body .column #online {
   margin-left: 70px;

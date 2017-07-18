@@ -2,10 +2,10 @@
   position: relative;
 }
 .wrap #g-lt {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 777;
+  float: left;
+  margin-right: -300px;
   width: 300px;
   height: 100vh;
   background: #2e2930;
@@ -137,6 +137,48 @@
 .wrap .g-rt .g-in .g-mn-down .g-down-body {
   padding: 20px;
   border-top: 1px solid #f0f0f0;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .perPage,
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .jumpPage {
+  margin-left: 50px;
+  float: right;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .perPage span,
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .jumpPage span {
+  font-size: 12px;
+  line-height: 30px;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .perPage input,
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .jumpPage input {
+  width: 50px;
+  height: 30px;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .perPage .cb,
+.wrap .g-rt .g-in .g-mn-down .g-down-nav .jumpPage .cb {
+  clear: both;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav ul {
+  margin-left: 50px;
+  float: right;
+  list-style: none;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav ul li {
+  float: left;
+  margin-left: 5px;
+  padding: 0 8px;
+  border: 1px solid #999;
+  color: #000;
+  line-height: 30px;
+  list-style: none;
+}
+.wrap .g-rt .g-in .g-mn-down .g-down-nav button {
+  margin-left: 50px;
+  float: right;
+  width: 50px;
+  height: 30px;
+  color: #006e54;
+  border: 1px solid #006e54;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=screen6-2.css.map */

@@ -1,11 +1,8 @@
-.wrap {
-  position: relative;
-}
 .wrap #g-lt {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 777;
+  float: left;
+  margin-right: -300px;
   width: 300px;
   height: 100vh;
   background: #2e2930;

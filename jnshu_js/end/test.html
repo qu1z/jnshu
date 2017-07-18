@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="APP">
+
+<body>
+<form ng-controller="uploader">
+    <input type="file"  onchange="angular.element(this).scope().filesChanged(this)" multiple/>
+    <button ng-click="upload()">upload</button>
+    <li ng-repeat="file in files">{{file.name}}</li>
+</form>
+
+<script src="http://code.angularjs.org/1.2.2/angular.min.js"></script>
+<script>
+    angular.module('APP', []).
+    directive('fileInput', ['$parse', function($parse){
+        return{
+            restrict:'A',
+            link:function(scope, elm, attrs){
+                elm.bind('change', function(){
+                    $parse(attrs.fileInput)
+                        .assign(scope, elm[0].files)
+                    $scope.$apply()
+                })
+            }
+        }
+    }]).
+    controller('uploader', ['$scope', '$http',
+        function($scope, $http){
+            $scope.filesChanged = function(elm){
+                alert("1");
+                $scope.files = elm.files
+                $sope.$apply();
+            }
+            $scope.upload = function(){
+                alert("2");
+                var fd = new FormData()
+                angular.forEach($scope.files, function(file){
+                    alert(file);
+                    fd.append('file', file)
+                })
+                $http.post('/mgr/album-picture-upload', fd,{
+                    transformRequest:angular.identity,
+                    headers:{'Content-Type':undefined}
+                })
+                    .sucess(function(d){
+                        console.log(d)
+                    })
+            }
+        }
+    ])
+</script>
+
+</body>
+</html>

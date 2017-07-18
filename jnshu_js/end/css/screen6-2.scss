@@ -5,146 +5,187 @@ $bg_grey: #f0f0f0;
   justify-content: $justify;
   align-items: center;
 }
-.wrap {
-  position: relative;
-  #g-lt {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 777;
-    //float: left;
-    //margin-right: -300px;
-    width: 300px;
-    height: 100vh;
-    background: $pb;
-    ul {
-      li {
-        margin:  {
-          top: 10px;
-          left: 80px;
-        }
-        height: 40px;
-        line-height: 40px;
-        text-align: left;
-        font-size: 24px;
-        color: #fff;
-        a {
-          text-decoration:none;
-          color: #fff!important;
-        }
-      }
-      .g-hd-lt {
-        margin: 0;
-        text-align: center;
-        border-bottom: 1px solid #fff;
-      }
-      #form {
-        margin-left: 100px;
-      }
-    }
-  }
-  .g-rt {
-    float: right;
-    width: 100%;
-    .g-in {
-      margin-left: 300px;
-      .g-hd-rt {
-        padding: 14px 0;
-        height: 40px;
-        border-bottom: 1px solid $bg_grey;
-        span {
-          float: right;
-          padding: 0 10px;
-          line-height: 12px;
-          font-size: 12px;
-          border-right: 1px solid #000;
-        }
-        .f-icon-2 {
-          border: none;
-        }
-      }
-      .g-mn-up {
-        margin: 40px;
-        padding: 40px;
-        //height: 200px;
-        border-radius: 5px;
-        border: 1px solid $bg_grey;
-        .g-mn-up1 {
-          @include flex (space-between);
-          input {
-            width: 150px;
-            height: 32px;
+  .wrap {
+    position: relative;
+    #g-lt {
+      position: relative;
+      //top: 0;
+      //left: 0;
+      z-index: 777;
+      float: left;
+      margin-right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: $pb;
+      ul {
+        li {
+          margin: {
+            top: 10px;
+            left: 80px;
           }
-          .line {
-            width: 50px;
-            height: 0;
-            border: 1px solid #000;
-          }
-          select {
-            width: 150px;
-            height: 32px;
+          height: 40px;
+          line-height: 40px;
+          text-align: left;
+          font-size: 24px;
+          color: #fff;
+          a {
+            text-decoration: none;
+            color: #fff !important;
           }
         }
-        .g-mn-up2 {
-          //@include flex (space-between);
-          margin-top: 40px;
-          select {
-            margin-left: 60px;
-            width: 150px;
-            height: 32px;
-          }
+        .g-hd-lt {
+          margin: 0;
+          text-align: center;
+          border-bottom: 1px solid #fff;
         }
-        .g-mn-up3 {
-          margin-top: 40px;
-          #clear {
-            float: right;
-            margin-left: 10px;
-            width: 50px;
-            height: 30px;
-            border: none;
-            border-radius: 3px;
-            background: red;
-            color: #fff;
-          }
-          #search {
-            float: right;
-            margin-left: 10px;
-            width: 50px;
-            height: 30px;
-            border: none;
-            border-radius: 3px;
-            background: green;
-            color: #fff;
-          }
-          .f-cb {
-            clear: both;
-          }
-        }
-      }
-      .g-mn-down {
-        margin: 40px {
-          top: 0;
-        }
-        border: 1px solid $bg_grey;
-        border-radius: 5px;
-        .g-down-title {
-          @include flex (space-between);
-          padding: 10px;
-          #add {
-            @include flex (center);
-            width: 40px;
-            height: 20px;
-            border: none;
-            border-radius: .5px;
-            background: green;
-            color: #fff;
-          }
-        }
-        .g-down-body {
-          padding: 20px;
-          border-top: 1px solid $bg_grey;
+        #form {
+          margin-left: 100px;
         }
       }
     }
+    .g-rt {
+      float: right;
+      width: 100%;
+      .g-in {
+        margin-left: 300px;
+        .g-hd-rt {
+          padding: 14px 0;
+          height: 40px;
+          border-bottom: 1px solid $bg_grey;
+          span {
+            float: right;
+            padding: 0 10px;
+            line-height: 12px;
+            font-size: 12px;
+            border-right: 1px solid #000;
+          }
+          .f-icon-2 {
+            border: none;
+          }
+        }
+        .g-mn-up {
+          margin: 40px;
+          padding: 40px;
+          //height: 200px;
+          border-radius: 5px;
+          border: 1px solid $bg_grey;
+          .g-mn-up1 {
+            @include flex (space-between);
+            input {
+              width: 150px;
+              height: 32px;
+            }
+            .line {
+              width: 50px;
+              height: 0;
+              border: 1px solid #000;
+            }
+            select {
+              width: 150px;
+              height: 32px;
+            }
+          }
+          .g-mn-up2 {
+            //@include flex (space-between);
+            margin-top: 40px;
+            select {
+              margin-left: 60px;
+              width: 150px;
+              height: 32px;
+            }
+          }
+          .g-mn-up3 {
+            margin-top: 40px;
+            #clear {
+              float: right;
+              margin-left: 10px;
+              width: 50px;
+              height: 30px;
+              border: none;
+              border-radius: 3px;
+              background: red;
+              color: #fff;
+            }
+            #search {
+              float: right;
+              margin-left: 10px;
+              width: 50px;
+              height: 30px;
+              border: none;
+              border-radius: 3px;
+              background: green;
+              color: #fff;
+            }
+            .f-cb {
+              clear: both;
+            }
+          }
+        }
+        .g-mn-down {
+          margin: 40px {
+            top: 0;
+          }
+          border: 1px solid $bg_grey;
+          border-radius: 5px;
+          .g-down-title {
+            @include flex (space-between);
+            padding: 10px;
+            #add {
+              @include flex (center);
+              width: 40px;
+              height: 20px;
+              border: none;
+              border-radius: .5px;
+              background: green;
+              color: #fff;
+            }
+          }
+          .g-down-body {
+            padding: 20px;
+            border-top: 1px solid $bg_grey;
+          }
+          .g-down-nav {
+            .perPage,
+            .jumpPage {
+              margin-left: 50px;
+              float: right;
+              span {
+                font-size: 12px;
+                line-height: 30px;
+              }
+              input {
+                width: 50px;
+                height: 30px;
+              }
+              .cb {
+                clear:both;
+              }
+            }
+            ul {
+              margin-left: 50px;
+              float: right;
+              list-style: none;
+              li {
+                float: left;
+                margin-left: 5px;
+                padding: 0 8px;
+                border: 1px solid #999;
+                color: #000;
+                line-height: 30px;
+                list-style: none;
+              }
+            }
+            button {
+              margin-left: 50px;
+              float: right;
+              width: 50px;
+              height: 30px;
+              color: #006e54;
+              border: 1px solid #006e54;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
   }
-}
